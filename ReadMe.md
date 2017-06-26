@@ -53,7 +53,7 @@ For example, here `test.html` and `test.png` are created.
 
 ### Conversion of PNG to TIFF => Python3
 
-**Assumption** : Python3 library `pillow` in pre-installed.
+**Assumptions** : Python3 library `pillow` is pre-installed.
 
 1. In the `convert_to_tiff.py` file, caliberate the `dpi_value` for desired value.
 
