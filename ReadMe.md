@@ -73,6 +73,9 @@ dpi_value = 500 # default value
 
 For example, now there's a `./test` tiff image file in the folder as well.
 
-And that's it - **No Ugly Figures** :)
+### TODO
+- Convert the scripts to a single programming language.
 
+
+And that's it - **No Ugly Figures** :)
 
