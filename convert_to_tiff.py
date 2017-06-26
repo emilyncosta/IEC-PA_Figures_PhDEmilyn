@@ -3,7 +3,7 @@ import glob
 
 from PIL import Image
 
-dpi_value = 500
+dpi_value = 500 # default value
 files = glob.glob("*.png")
 
 
