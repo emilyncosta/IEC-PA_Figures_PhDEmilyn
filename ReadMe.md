@@ -1,6 +1,6 @@
 # UglyFigures
 
-These are simple Ruby and Python3 automation scripts 
+These are simple `Ruby` and `Python3` automation scripts 
 
 - To isolate HQ PNG images from the PDF at a given DPI.
 - Convert them to TIFF images at a given DPI.
@@ -10,7 +10,7 @@ These are simple Ruby and Python3 automation scripts
 
 # How to Use
 
-### Conversion from PDF to PNG
+### Conversion from PDF to PNG => Ruby
 
 **Assumptions** : Each PDF contains only a single HI-DEF image.
 
@@ -51,7 +51,7 @@ UglyFigures git/master
 
 For example, here `test.html` and `test.png` are created.
 
-### Conversion of PNG to TIFF
+### Conversion of PNG to TIFF => Python3
 
 **Assumption** : Python3 library `pillow` in pre-installed.
 
@@ -73,6 +73,6 @@ dpi_value = 500 # default value
 
 For example, now there's a `./test` tiff image file in the folder as well.
 
-And that's it - No Ugly Figures :)
+And that's it - **No Ugly Figures** :)
 
 
