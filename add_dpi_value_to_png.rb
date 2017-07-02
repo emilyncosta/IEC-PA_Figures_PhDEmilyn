@@ -1,0 +1,1 @@
+convert -density 300 -units pixelsperinch image-27607.png Figure2.png
