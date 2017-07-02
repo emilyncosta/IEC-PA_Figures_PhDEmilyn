@@ -23,3 +23,8 @@ end
 
 
 system("rm", "pdf2htmlEX-64x64.png")
+
+html = Dir["*.html"]
+for i in html
+	system("rm", i)
+end

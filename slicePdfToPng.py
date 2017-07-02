@@ -27,7 +27,6 @@ import os
 import sys
 
 
-dpi_value = 300
 
 def convert(filepdf, dpi_value):
     #used to generate temp file name. so we will not duplicate or replace anything
@@ -38,17 +37,21 @@ def convert(filepdf, dpi_value):
     os.mkdir(folderName)
 
 
-    with Image(filename=filepdf, resolution=dpi_value) as img:
+    with Image(filename=filepdf, resolution=500) as img:
         #keep good quality
         img.compression_quality = 100
         #save it to tmp name
         img.save(filename=folderName + "/" + "./image-%s.png" % uuid_set)
+        im = Img.open(folderName + "/" + "./image-%s.png" % uuid_set)
+        im.save(folderName + "/" + "./out.png", dpi = (dpi_value, dpi_value))
 
 
 if __name__ == "__main__":
-    arg = sys.argv[1]
-    convert(arg, dpi_value)
-    print("[*] Succcessfully converted!")
+    dpi_value = 300
+    files = glob.glob("*.pdf")
+    for f in files:
+      convert(f, dpi_value)
+      print(f + " => Succcessfully converted!")
 """
 ===========================================
 Running Test:
