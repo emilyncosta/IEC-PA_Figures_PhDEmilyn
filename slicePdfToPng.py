@@ -37,17 +37,18 @@ def convert(filepdf, dpi_value):
     os.mkdir(folderName)
 
 
-    with Image(filename=filepdf, resolution=500) as img:
+    with Image(filename=filepdf, resolution = 500) as img:
         #keep good quality
         img.compression_quality = 100
+        fileName = folderName + "/" + "./image-%s.png" % uuid_set
         #save it to tmp name
-        img.save(filename=folderName + "/" + "./image-%s.png" % uuid_set)
-        im = Img.open(folderName + "/" + "./image-%s.png" % uuid_set)
+        img.save(filename=fileName)
+        im = Img.open(fileName)
         im.save(folderName + "/" + "./out.png", dpi = (dpi_value, dpi_value))
 
 
 if __name__ == "__main__":
-    dpi_value = 300
+    dpi_value = 2000
     files = glob.glob("*.pdf")
     for f in files:
       convert(f, dpi_value)
