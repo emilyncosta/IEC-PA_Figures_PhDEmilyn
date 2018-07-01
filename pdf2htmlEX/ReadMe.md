@@ -18,3 +18,7 @@ would produce a single HTML file `test.html` in `~/pdf` directory.
 For detail instruciton on how to run `pdf2htmlEX`, please read the wiki
 
 https://github.com/coolwanglu/pdf2htmlEX/wiki/Quick-Start
+
+```
+ docker run -ti --rm -v /Users/eklavya/Desktop/figures:/pdf bwits/pdf2htmlex-alpine pdf2htmlEX --hdpi 500 --vdpi 500 --embed-image 0  hcc_eai.pdf
+ ```
