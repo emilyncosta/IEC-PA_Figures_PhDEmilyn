@@ -5,6 +5,9 @@ These are simple `Ruby` and `Python3` automation scripts
 - To isolate HQ PNG images from the PDF at a given DPI.
 - Convert them to TIFF images at a given DPI.
 
+# Docker Image
+
+https://cloud.docker.com/repository/docker/abhi18av/uglyfigures
 
 
 
