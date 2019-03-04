@@ -1,4 +1,4 @@
-require "Shellwords"
+require "shellwords"
 
 files = Dir["*.pdf"]
 
@@ -7,7 +7,7 @@ dpi_value = 500  # default value
 # with docker use the following command
 #  docker run -ti --rm -v /Users/eklavya/Desktop/figures:/pdf bwits/pdf2htmlex-alpine pdf2htmlEX --hdpi 500 --vdpi 500 --embed-image 0  hcc_eai.pdf
 
-pdf2htmlEX = "pdf2htmlEX --hdpi " + dpi_value.to_s + " --vdpi " + dpi_value.to_s + " --embed-image 0 "
+pdf2htmlEX = " docker run -ti --rm -v " + Dir.pwd +  ":/pdf bwits/pdf2htmlex-alpine pdf2htmlEX " +  "--hdpi " + dpi_value.to_s + " --vdpi " + dpi_value.to_s + " --embed-image 0 "
 
 
 
